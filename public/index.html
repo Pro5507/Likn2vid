@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediaFlow</title>
+    <meta name="description" content="MediaFlow media downloader and converter with security-first processing." />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand-wrap">
+        <div class="brand-mark">M</div>
+        <div>
+          <h1>MediaFlow</h1>
+          <p>Your media. Your format. Your control.</p>
+        </div>
+      </div>
+      <button id="themeToggle" aria-label="Toggle color theme">Dark mode</button>
+    </header>
+
+    <main class="layout">
+      <section class="panel">
+        <h2>Downloader</h2>
+        <label for="sourceUrl">Source URL</label>
+        <input id="sourceUrl" type="url" placeholder="https://example.com/media.mp4" />
+        <button id="inspectBtn">Inspect</button>
+        <pre id="inspectResult">No inspection yet.</pre>
+      </section>
+
+      <section class="panel">
+        <h2>Image converter</h2>
+        <input id="imageFile" type="file" accept="image/*" />
+        <label for="imageFormat">Output format</label>
+        <select id="imageFormat">
+          <option value="jpeg">JPEG</option>
+          <option value="png">PNG</option>
+          <option value="webp">WebP</option>
+        </select>
+        <button id="convertImageBtn">Convert image</button>
+        <div id="imageOutput" class="output-area">No output yet.</div>
+      </section>
+
+      <section class="panel">
+        <h2>Video converter</h2>
+        <input id="videoFile" type="file" accept="video/*" />
+        <label for="videoFormat">Output format</label>
+        <select id="videoFormat">
+          <option value="webm">WebM</option>
+          <option value="mp4">MP4</option>
+          <option value="gif">GIF</option>
+        </select>
+        <button id="convertVideoBtn">Convert video</button>
+        <div id="videoOutput" class="output-area">No output yet.</div>
+      </section>
+    </main>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
